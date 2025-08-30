@@ -1,0 +1,13 @@
+# Editor settings
+.vscode/
+
+# Dependencies (only if you use Node/NPM later)
+node_modules/
+
+# Build output (if you use a bundler later)
+dist/
+out/
+
+# OS junk
+.DS_Store
+Thumbs.db
