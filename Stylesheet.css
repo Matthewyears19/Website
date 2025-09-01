@@ -100,3 +100,32 @@ p { margin: 0 0 1rem; }
 }
 .hours, .social { list-style: none; margin: 0; padding: 0; }
 .footer-bottom { border-top: 1px solid #e0e7ea; padding: 1rem 0; margin-top: 1rem; }
+/* --------- Outro Banner --------- */
+.outro {
+  background: var(--brand);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+}
+.outro-inner {
+  max-width: 700px;
+  margin-inline: auto;
+}
+.outro h2 {
+  font-size: clamp(1.8rem, 3vw + 1rem, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+.outro p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.85);
+}
+.outro .btn {
+  background: #fff;
+  color: var(--brand-ink);
+  font-weight: 600;
+}
+.outro .btn:hover {
+  background: #f0f0f0;
+}
