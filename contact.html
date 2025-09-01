@@ -44,34 +44,41 @@
 
   <main id="main" class="section">
     <div class="container" style="display:grid; gap:2rem;">
+
       <!-- Contact form -->
       <section aria-labelledby="contact-form-heading">
-        <h2 id="contact-form-heading">Send a message</h2>
-        <form class="contact-form" id="contact-form">
-          <label>
-            Your name
-            <input type="text" name="name" autocomplete="name" required>
-          </label>
+  <h2 id="contact-form-heading">Send a message</h2>
 
-          <label>
-            Email address
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
+  <!-- No action needed; JS will POST to Formspree -->
+  <form class="contact-form" id="contact-form">
+    <label>
+      Your name
+      <input type="text" name="name" autocomplete="name" required>
+    </label>
 
-          <label>
-            Phone (optional)
-            <input type="tel" name="phone" autocomplete="tel">
-          </label>
+    <label>
+      Email address
+      <input type="email" name="email" autocomplete="email" required>
+    </label>
 
-          <label>
-            Message
-            <textarea name="message" rows="6" required></textarea>
-          </label>
+    <label>
+      Phone (optional)
+      <input type="tel" name="phone" autocomplete="tel">
+    </label>
 
-          <button type="submit" class="btn">Send message</button>
-          <p id="form-status" class="visually-hidden" aria-live="polite"></p>
-        </form>
-      </section>
+    <label>
+      Message
+      <textarea name="message" rows="6" required></textarea>
+    </label>
+
+    <!-- Optional subject that will appear in the email you receive -->
+    <input type="hidden" name="_subject" value="New message from Moston Pharmacy website">
+
+    <button type="submit" class="btn">Send message</button>
+    <p id="form-status" class="visually-hidden" aria-live="polite"></p>
+  </form>
+</section>
+
 
       <!-- Direct contact details (matches footer content) -->
       <section aria-labelledby="direct-contact-heading" class="card">

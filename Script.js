@@ -44,3 +44,56 @@ function renderUpdates(list) {
     });
 }
 renderUpdates(updates);
+
+// ---- Contact form submit (Formspree) ----
+(() => {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const status = document.getElementById('form-status');
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  // TODO: replace with your real endpoint, e.g. "https://formspree.io/f/abcdwxyz"
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-endpoint-id";
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // reveal status line + set initial message
+    status.classList.remove('visually-hidden', 'ok', 'error');
+    status.textContent = 'Sending…';
+    submitBtn.disabled = true;
+
+    try {
+      const data = new FormData(form);
+
+      // Helpful metadata
+      data.append('_subject', 'New message from Moston Pharmacy website');
+      data.append('page', window.location.href);
+
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.reset();
+        status.textContent = 'Thanks — your message has been sent. We’ll get back to you soon.';
+        status.classList.add('ok');
+      } else {
+        const json = await res.json().catch(() => ({}));
+        const msg = json.errors?.map(e => e.message).join(', ') || 'Please try again later.';
+        status.textContent = 'Sorry, something went wrong. ' + msg;
+        status.classList.add('error');
+      }
+    } catch (err) {
+      status.textContent = 'Network error — please try again.';
+      status.classList.add('error');
+    } finally {
+      submitBtn.disabled = false;
+      // Hide the status after a few seconds to keep the UI tidy
+      setTimeout(() => status.classList.add('visually-hidden'), 6000);
+    }
+  });
+})();
