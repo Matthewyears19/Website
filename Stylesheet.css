@@ -1,0 +1,102 @@
+/* --------- Theme (easy to tweak) --------- */
+:root{
+  --brand: #17a34a;      /* primary green */
+  --brand-ink: #0a5a2a;  /* darker shade */
+  --bg: #ffffff;
+  --ink: #122023;
+  --ink-muted: #5b6a6e;
+  --surface: #f6f7f8;
+  --radius: 14px;
+}
+
+/* --------- Reset / base --------- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--brand-ink); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+.container { width: min(1100px, 92%); margin-inline: auto; }
+.section { padding: 3rem 0; }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .6rem; }
+p { margin: 0 0 1rem; }
+.btn {
+  display: inline-block; padding: .75rem 1rem; border-radius: var(--radius);
+  background: var(--brand); color: white; font-weight: 600;
+}
+.btn:hover { filter: brightness(0.95); }
+.skip-link {
+  position: absolute; left: -9999px; top: auto;
+}
+.skip-link:focus {
+  left: 1rem; top: 1rem; background: #000; color: #fff; padding: .5rem .75rem; z-index: 999;
+}
+
+/* --------- Header / Nav --------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: #fff; border-bottom: 1px solid #e7ecef;
+}
+.header-inner {
+  display: flex; align-items: center; gap: 1rem;
+  padding: .75rem 0;
+}
+.brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; }
+.brand-logo { width: 36px; height: 36px; }
+.brand-name { color: var(--ink); }
+
+.nav-toggle {
+  margin-left: auto; display: none; border: 1px solid #dce3e6;
+  background: var(--surface); padding: .5rem .75rem; border-radius: .5rem;
+}
+
+.site-nav ul { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.site-nav a { padding: .4rem .6rem; border-radius: .4rem; }
+.site-nav a:hover { background: var(--surface); }
+
+/* Mobile nav */
+@media (max-width: 760px){
+  .nav-toggle { display: inline-block; }
+  .site-nav { display: none; width: 100%; }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; padding: .75rem 0; }
+}
+
+/* --------- Hero --------- */
+.hero {
+  background: linear-gradient(180deg, #e9f7ef, #ffffff);
+  padding: 3.5rem 0;
+}
+.hero h1 { font-size: clamp(1.6rem, 2.6vw + 1rem, 2.4rem); }
+.hero p { color: var(--ink-muted); max-width: 55ch; }
+
+/* --------- Cards / grids --------- */
+.card-grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: #fff; border: 1px solid #e7ecef; border-radius: var(--radius);
+  padding: 1rem;
+}
+
+/* --------- News list --------- */
+.news-list { display: grid; gap: .75rem; }
+.news-item {
+  background: #fff; border: 1px solid #e7ecef; border-radius: var(--radius);
+  padding: .85rem 1rem;
+}
+.news-item time { color: var(--ink-muted); font-size: .9rem; display: block; }
+
+/* --------- Footer --------- */
+.site-footer { background: var(--surface); padding-top: 2rem; margin-top: 2rem; }
+.footer-grid {
+  display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.hours, .social { list-style: none; margin: 0; padding: 0; }
+.footer-bottom { border-top: 1px solid #e0e7ea; padding: 1rem 0; margin-top: 1rem; }

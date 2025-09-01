@@ -1,4 +1,121 @@
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moston Pharmacy</title>
 
+  <!-- Favicon/logo (replace later) -->
+  <link rel="icon" href="Logo 8.png" />
 
+  <!-- Basic SEO you can edit later -->
+  <meta name="description" content="Independent community pharmacy: prescriptions, advice, and health services." />
+
+  <link rel="stylesheet" href="Stylesheet.css" />
+  <script defer src="Script.js"></script>
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <!-- Replace with your real logo image later -->
+        <img src="assets/logo-placeholder.svg" alt="Moston Pharmacy logo" class="brand-logo" />
+        <span class="brand-name">Moston Pharmacy</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#news">Updates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Your friendly, independent community pharmacy</h1>
+      <p>Prescriptions, health advice, and convenient local services. <strong>We Deliver Better.</strong></p>
+      <a class="btn" href="#services">See our services</a>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- Services (edit these as you like) -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Prescription Collection & Delivery</h3>
+            <p>Free local delivery for eligible patients. Ask in-store or call us.</p>
+          </article>
+          <article class="card">
+            <h3>Medication Reviews</h3>
+            <p>One-to-one checks to make sure your medicines work well for you.</p>
+          </article>
+          <article class="card">
+            <h3>Travel & Vaccinations</h3>
+            <p>Jabs and advice for trips (stock varies — call ahead).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- News / Updates will be injected by JS -->
+    <section id="news" class="section">
+      <div class="container">
+        <h2>Latest updates</h2>
+        <div id="news-list" class="news-list" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact</h3>
+        <p>
+          Moston Pharmacy Services<br>
+          G2, Dragon's Lane<br>
+          Sandbach, CW11 3PA
+        </p>
+        <p>
+          Tel: <a href="tel:+44161XXXXXXX">01270 758779</a><br>
+          Email: <a href="mailto:hello@mostonpharmacy.example">hello@mostonpharmacy.example</a>
+        </p>
+      </div>
+
+      <div>
+        <h3>Opening hours</h3>
+        <ul class="hours">
+          <li>Mon–Fri: 9:00 – 17:00</li>
+          <li>Sat-Sun: Closed</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Follow</h3>
+        <ul class="social">
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="TikTok">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Moston Pharmacy Services Ltd. All rights reserved.</small>
+    </div>
+  </footer>
+</body>
 </html>
