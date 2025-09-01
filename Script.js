@@ -53,7 +53,7 @@ renderUpdates(updates);
   const status = document.getElementById('form-status');
   const submitBtn = form.querySelector('button[type="submit"]');
 
-  // TODO: replace with your real endpoint, e.g. "https://formspree.io/f/abcdwxyz"
+  // TODO: replace with your real endpoint, e.g. "https://formspree.io/f/mvgbqbby"
   const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-endpoint-id";
 
   form.addEventListener('submit', async (e) => {
