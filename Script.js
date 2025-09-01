@@ -54,7 +54,7 @@ renderUpdates(updates);
   const submitBtn = form.querySelector('button[type="submit"]');
 
   // TODO: replace with your real endpoint, e.g. "https://formspree.io/f/mvgbqbby"
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-endpoint-id";
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mvgbqbby";
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
