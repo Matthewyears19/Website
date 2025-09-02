@@ -45,36 +45,36 @@
     <div class="container" style="display:grid; gap:2rem;">
 
       <!-- Contact form -->
-      <section aria-labelledby="contact-form-heading">
+<section aria-labelledby="contact-form-heading" class="card">
   <h2 id="contact-form-heading">Send a message</h2>
 
-  <!-- No action needed; JS will POST to Formspree -->
   <form class="contact-form" id="contact-form">
-    <label>
-      Your name
-      <input type="text" name="name" autocomplete="name" required>
-    </label>
+    <div class="form-grid">
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required placeholder="Jane Doe">
+      </div>
 
-    <label>
-      Email address
-      <input type="email" name="email" autocomplete="email" required>
-    </label>
+      <div class="field">
+        <label for="email">Email address <span class="req">*</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      </div>
 
-    <label>
-      Phone (optional)
-      <input type="tel" name="phone" autocomplete="tel">
-    </label>
+      <div class="field">
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="01270 758779">
+      </div>
 
-    <label>
-      Message
-      <textarea name="message" rows="6" required></textarea>
-    </label>
+      <div class="field field--full">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="How can we help?"></textarea>
+      </div>
 
-    <!-- Optional subject that will appear in the email you receive -->
-    <input type="hidden" name="_subject" value="New message from Moston Pharmacy website">
-
-    <button type="submit" class="btn">Send message</button>
-    <p id="form-status" class="visually-hidden" aria-live="polite"></p>
+      <div class="actions">
+        <button type="submit" class="btn">Send message</button>
+        <p id="form-status" class="form-status visually-hidden" aria-live="polite"></p>
+      </div>
+    </div>
   </form>
 </section>
 
