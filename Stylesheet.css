@@ -44,10 +44,10 @@ p { margin: 0 0 1rem; }
 }
 .header-inner {
   display: flex; align-items: center; gap: 1rem;
-  padding: .75rem 0;
+  padding: 0.5rem ;
 }
 .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; }
-.brand-logo { width: 60px; height: auto; }
+.brand-logo { width: 160px; height: auto; }
 .brand-name { color: var(--ink); }
 
 .nav-toggle {
