@@ -233,3 +233,27 @@ p { margin: 0 0 1rem; }
 /* Pharmacy First blocks */
 .pf-block h2 { margin-bottom: .25rem; }
 .pf-elig { color: var(--ink-muted); margin-top: .25rem; }
+
+/* Limit Services grid to max 3 columns */
+#services .card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);   /* 3 across on desktop */
+}
+
+@media (max-width: 1024px){
+  #services .card-grid { grid-template-columns: repeat(2, 1fr); } /* 2 across */
+}
+@media (max-width: 640px){
+  #services .card-grid { grid-template-columns: 1fr; }            /* stack */
+}
+
+/* Make all cards the same height and keep the button aligned at the bottom */
+#services .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#services .card p:last-child {  /* the <p> that wraps "Learn more" */
+  margin-top: auto;
+}
