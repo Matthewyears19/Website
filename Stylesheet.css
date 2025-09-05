@@ -230,3 +230,6 @@ p { margin: 0 0 1rem; }
 .form-status.ok{ color: #176f2c; }
 .form-status.error{ color: #a61b1b; }
 
+/* Pharmacy First blocks */
+.pf-block h2 { margin-bottom: .25rem; }
+.pf-elig { color: var(--ink-muted); margin-top: .25rem; }
