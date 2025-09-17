@@ -15,14 +15,14 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 // ---- Simple “CMS”: edit your updates here ----
 const updates = [
   {
-    date: '2025-09-01',
-    title: 'Flu jabs now available',
-    body: 'Book in-store or call us. Limited slots each day.'
+    date: '2025-08-01',
+    title: 'Weight Loss and Management Service Launched',
+    body: 'We are introducing an exciting and promising treatment and support to guide patients within the community to a healthier life.'
   },
   {
-    date: '2025-09-03',
-    title: 'Prescription delivery',
-    body: 'Free local delivery for eligible patients — ask a team member.'
+    date: '2025-09-01',
+    title: 'Pharmacy First - Contraception',
+    body: 'Introducting NHS backed treatments for emergency contraception, with full amenmiety with our discrete service.'
   }
 ];
 
@@ -36,7 +36,7 @@ function renderUpdates(list) {
       const el = document.createElement('article');
       el.className = 'news-item';
       el.innerHTML = `
-        <time datetime="${item.date}">${new Date(item.date).toLocaleDateString()}</time>
+        <time datetime="${item.date}">${new Date(item.date).toLocaleDateString('en-GB')}</time>
         <h3>${item.title}</h3>
         <p>${item.body}</p>
       `;
