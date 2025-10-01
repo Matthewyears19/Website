@@ -22,7 +22,7 @@ const updates = [
   {
     date: '2025-09-01',
     title: 'Pharmacy First - Contraception',
-    body: 'Introducting NHS backed treatments for emergency contraception, with full amenmiety with our discrete service.'
+    body: 'Introducting NHS backed treatments for emergency contraception, with full anonymity with our discrete service.'
   }
 ];
 
