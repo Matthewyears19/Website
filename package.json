@@ -1,0 +1,7 @@
+{
+  "name": "moston-pharmacy",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.13 <25" },
+  "scripts": { "start": "node --env-file-if-exists=.env app/server.js", "test": "node --test tests/*.test.js" }
+}

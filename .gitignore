@@ -11,3 +11,11 @@ out/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Local accounts, test submissions, encryption keys and service credentials
+data/
+backups/
+.env
+.env.*
+!.env.example
+*.sqlite*
